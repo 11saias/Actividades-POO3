@@ -1,0 +1,314 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM6HI4Scu4HX3d7MKJbzUB6",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/11saias/Actividades-POO3/blob/main/martesPOO.ipynbkm\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Sandoval Llerena Isaias Nahum"
+      ],
+      "metadata": {
+        "id": "G3NmQsjL9YAZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "n9PPK4lG8dOX"
+      },
+      "outputs": [],
+      "source": [
+        "alumno = {'numero_cuenta' : 1232322 , 'carrera' : 'ICO' ,\n",
+        "            'direccion' : {'calle' : 'rancho seco', 'numero' : 23},\n",
+        "             'telefonos' : ['5566778844', '55118800']\n",
+        "          }"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(alumno['direccion']['calle'][3:6:1])\n",
+        "print(alumno['telefonos'])\n",
+        "print(alumno)\n",
+        "alumno['facultad'] = \"FES Aragón\"\n",
+        "print(alumno)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Atke2qS29Ko1",
+        "outputId": "d8eb1a08-089a-4c14-a954-077e718daa83"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "cho\n",
+            "['5566778844', '55118800']\n",
+            "{'numero_cuenta': 1232322, 'carrera': 'ICO', 'direccion': {'calle': 'rancho seco', 'numero': 23}, 'telefonos': ['5566778844', '55118800']}\n",
+            "{'numero_cuenta': 1232322, 'carrera': 'ICO', 'direccion': {'calle': 'rancho seco', 'numero': 23}, 'telefonos': ['5566778844', '55118800'], 'facultad': 'FES Aragón'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#if\n",
+        "edad = 20\n",
+        "if edad >= 18:\n",
+        "    print(\"Eres mayor de edad.\")\n",
+        "    print(\"otra cosa\")\n",
+        "    print(\"algo más\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MQNTbLbo_icz",
+        "outputId": "3eb19543-2adb-4d57-85be-6c47242cf96d"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Eres mayor de edad.\n",
+            "otra cosa\n",
+            "algo más\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#if-else\n",
+        "edad = 2\n",
+        "if edad >= 18:\n",
+        "    print(\"Eres mayor de edad.\")\n",
+        "    print(\"otra cosa\")\n",
+        "    print(\"algo más\")\n",
+        "else:\n",
+        "  print(\"Eres menor de edad\")\n",
+        "  print(\"otra cosa\")\n",
+        "  print(\"algo más\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-sHG4Ttw_B_i",
+        "outputId": "959977a1-e1ac-45cc-b224-398778258ff1"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Eres menor de edad\n",
+            "otra cosa\n",
+            "algo más\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# if- elif - else\n",
+        "edad = 20\n",
+        "if edad < 13:\n",
+        "    print(\"Eres un niño.\")\n",
+        "elif edad < 18:\n",
+        "    print(\"Eres un adolescente.\")\n",
+        "else:\n",
+        "    print(\"Eres un adulto.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q--dx7TS_1Bs",
+        "outputId": "d3a41f17-ce42-4246-b5b5-79d6e86b32a9"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Eres un adulto.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# if-elif-elif. -- Selección multiple (switch)\n",
+        "edad = 20\n",
+        "if edad < 13:\n",
+        "    print(\"Eres un niño.\")\n",
+        "elif edad < 18:\n",
+        "    print(\"Eres un adolescente.\")\n",
+        "elif edad < 30:\n",
+        "    print(\"Eres un joven adulto.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bQh9bSSIAg9b",
+        "outputId": "69f91d4e-69ef-452c-fdf2-4bd6592fc149"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Eres un joven adulto.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# For   for(int i = 1 ; i<10 ; i++)\n",
+        "lim = 10\n",
+        "for i in range(1, lim, 2):\n",
+        "    print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9__k1beDBGqo",
+        "outputId": "2a82475e-9a41-4778-9590-bbcef57a76d6"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#for-each\n",
+        "frutas = ['piña', 'pera', 'manzana', 'fresa', 'aguacate']\n",
+        "for numero in frutas:\n",
+        "    print(numero)\n",
+        "\n",
+        "print(\"-----------------------\")\n",
+        "# break y continue\n",
+        "for numero in frutas:\n",
+        "    if numero == \"manzana\":\n",
+        "        continue  # ó continue\n",
+        "    print(numero)  # imprime la fruta\n",
+        "print(\"Fin\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J87riVYkCPja",
+        "outputId": "d985283d-ce04-46ce-c7a9-03a9530871a4"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "piña\n",
+            "pera\n",
+            "manzana\n",
+            "fresa\n",
+            "aguacate\n",
+            "-----------------------\n",
+            "piña\n",
+            "pera\n",
+            "fresa\n",
+            "aguacate\n",
+            "Fin\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tam = 0\n",
+        "while tam < 10:\n",
+        "  print(tam)\n",
+        "  tam = int(input(\"Dame un numero entero:\"))\n",
+        "print(\"Final\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IAf7iaADDlWA",
+        "outputId": "0eae2566-a756-4d52-d358-ff3d29d0f6e6"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "Dame un numero entero:2\n",
+            "2\n",
+            "Dame un numero entero:22\n",
+            "Final\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
